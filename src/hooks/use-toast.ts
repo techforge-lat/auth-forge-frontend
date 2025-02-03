@@ -173,6 +173,7 @@ function toast({ ...props }: Toast) {
 function useToast() {
   const [state, setState] = useState<State>(memoryState);
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   useEffect(() => {
     listeners.push(setState);
     return () => {
@@ -181,7 +182,7 @@ function useToast() {
         listeners.splice(index, 1);
       }
     };
-  }, []);
+  }, [state]);
 
   return {
     ...state,
