@@ -1,8 +1,8 @@
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 import { defineConfig } from "@rsbuild/core";
 import { pluginReact } from "@rsbuild/plugin-react";
 import { TanStackRouterRspack } from "@tanstack/router-plugin/rspack";
-import { fileURLToPath } from "node:url";
-import path from "node:path";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
