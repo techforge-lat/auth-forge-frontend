@@ -9,7 +9,7 @@ import type {
 import { ApiError } from "./error";
 import type { Response } from "./response";
 
-const DOMAIN = import.meta.env.BASE_URL;
+const DOMAIN = process.env.PUBLIC_BASE_URL;
 
 export interface RequestConfig extends Omit<AxiosRequestConfig, "url"> {
   version?: string;
